@@ -1,0 +1,24 @@
+const produtos = [
+    { nome: "Notebook", preco: 3500, quantidade: 2 },
+    { nome: "Mouse", preco: 80, quantidade: 5 },
+    { nome: "Teclado", preco: 150, quantidade: 3 },
+    { nome: "Monitor", preco: 1200, quantidade: 4 },
+    { nome: "Headset", preco: 250, quantidade: 2 },
+    { nome: "Mesa", preco: 500, quantidade: 4 }
+];
+
+function calcularValorProdutos(produtos) {
+    const valores =[];
+    for (let i = 0 ; i < produtos.length ; i++) {
+        let valorTotal = produtos[i].preco * produtos[i].quantidade;
+        valores.push(
+            {
+            nome: produtos[i].nome ,
+            valorTotal: valorTotal
+        })
+    }
+    return valores
+}
+
+let resultado = calcularValorProdutos(produtos);
+console.log(resultado)
